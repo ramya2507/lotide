@@ -27,10 +27,10 @@ const without = (source,itemsToRemove) => {
     return "All the items are removed";
   }
   //create a new array to retain the value of pervious array
-  let itemsAfterRemoved = [];
-  for(let sr of source){
+  let itemsAfterRemoved = [...source];
+ /* for(let sr of source){
     itemsAfterRemoved.push(sr);
-  }
+  }*/
   for(let i = 0;i < itemsAfterRemoved.length ; i++){
     for(let j = 0 ; j < itemsToRemove.length;j++){
       if(itemsAfterRemoved[i] === itemsToRemove[j]){
