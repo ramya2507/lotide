@@ -18,7 +18,7 @@ const assertArraysEqual =  (actual,expected) => {
   if (result) {
     console.log(`\u2705 \u2705 \u2705 Assertion Passed! ${actual} = ${expected}`);
   } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed! ${actaul} = ${expected}`);
+    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed! ${actaul} != ${expected}`);
   }
 };
 
