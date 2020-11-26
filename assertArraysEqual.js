@@ -16,9 +16,9 @@ const eqArrays = (array1,array2) => {
 const assertArraysEqual =  (actual,expected) => {
   let result = eqArrays(actual,expected);
   if (result) {
-    console.log(`\u2705 \u2705 \u2705 Assertion Passed!`);
+    console.log(`\u2705 \u2705 \u2705 Assertion Passed! ${actual} = ${expected}`);
   } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed!`);
+    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed! ${actaul} = ${expected}`);
   }
 };
 
