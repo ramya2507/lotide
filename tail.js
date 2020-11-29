@@ -1,10 +1,4 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\u2705 \u2705 \u2705 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //Function returns all the elements of the array expect for first element
 const tail = function(array) {
@@ -15,11 +9,7 @@ const tail = function(array) {
   }
 };
 
-//Test code
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(JSON.stringify(result),JSON.stringify(["Lighthouse", "Labs"]));
+module.exports = tail;
 
-//Test to check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+
+
