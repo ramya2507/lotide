@@ -1,4 +1,4 @@
-//Function Implementation
+//assertEqual function equals two strings and returns true or false
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`\u2705 \u2705 \u2705 Assertion Passed: ${actual} === ${expected}`);
@@ -7,6 +7,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//Test Code
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 12);
+
+module.exports = assertEqual;
