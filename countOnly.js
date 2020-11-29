@@ -1,31 +1,27 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\u2705 \u2705 \u2705 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 //Function implementation of countOnly
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
 const countOnly = function(allItems, itemsToCount) {
   let itemsCounted = {};
-  for(let item in itemsToCount){
-    if(itemsToCount[item] === true){
+  for (let item in itemsToCount) {
+    if (itemsToCount[item] === true) {
       let count = 0;
-      for(let elements of allItems){
-        if(item === elements){
+      for (let elements of allItems) {
+        if (item === elements) {
           count++;
         }
       }
-      if(count > 0){
+      if (count > 0) {
        itemsCounted[item] = count;
       }
     }
   }
   return itemsCounted;
 }
+
+//Test Code
 const firstNames = [
   "Karl",
   "Salima",

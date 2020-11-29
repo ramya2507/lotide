@@ -1,45 +1,23 @@
-const eqArrays = (array1,array2) => {
-  if(array1.length === array2.length){
-    for(let i = 0; i < array1.length; i++){
-      if(array1[i] === array2[i]){
+const assertArraysEqual =  require('./index').assertArraysEqual;
 
-      }else{
-        return false;
-      }
-    }
-    return true;
-  } else {
-    return false;
-  }
-};
-//function that consoles the comparison result of two arrays
-const assertArraysEqual =  (actual,expected) => {
-  let result = eqArrays(actual,expected);
-  if (result) {
-    console.log(`\u2705 \u2705 \u2705 Assertion Passed! ${actual} = ${expected}`);
-  } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed! ${actual} != ${expected}`);
-  }
-};
 //function to return a subset array by removing the unwanted items
 const without = (source,itemsToRemove) => {
-  if(eqArrays(source,itemsToRemove)){
+  if (eqArrays(source,itemsToRemove)) {
     return "All the items are removed";
   }
   //create a new array to retain the value of pervious array
   let itemsAfterRemoved = [...source];
- /* for(let sr of source){
-    itemsAfterRemoved.push(sr);
-  }*/
-  for(let i = 0;i < itemsAfterRemoved.length ; i++){
-    for(let j = 0 ; j < itemsToRemove.length;j++){
-      if(itemsAfterRemoved[i] === itemsToRemove[j]){
+  for (let i = 0;i < itemsAfterRemoved.length ; i++) {
+    for (let j = 0 ; j < itemsToRemove.length;j++) {
+      if (itemsAfterRemoved[i] === itemsToRemove[j]) {
         itemsAfterRemoved.splice(i,1);
       }
     }
   }
   return itemsAfterRemoved;
 };
+
+//Test code
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); 
 console.log(words);

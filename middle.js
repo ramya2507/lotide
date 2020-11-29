@@ -3,7 +3,7 @@ const assertArraysEqual =  require('./assertArraysEqual');
 //function to return the mid elements of an array
 const middle = (array) => {
   let length = array.length;
-  if(length > 2){
+  if (length > 2) {
     let midArray = [];
     let mid = Math.floor(length/2);
     if (length % 2 !== 0) { 
@@ -17,4 +17,5 @@ const middle = (array) => {
     return [];
   } 
 };
- module.exports = middle;
+
+module.exports = middle;

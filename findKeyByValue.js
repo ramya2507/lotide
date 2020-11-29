@@ -1,15 +1,9 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\u2705 \u2705 \u2705 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`\u26D4 \u26D4 \u26D4 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./index').assertEqual;
 
 //Function to return the key matching the argument value passed
 const findKeyByValue = (givenObject,value) => {
-  for(let key in givenObject){
-    if(givenObject[key] === value){
+  for (let key in givenObject) {
+    if (givenObject[key] === value) {
      return key;
     } 
   }
